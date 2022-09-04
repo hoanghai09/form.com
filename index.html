@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1063010157804687"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="form1" action="">
+        <div class="container">
+            <h3>Thành viên đăng ký</h3>
+            <span class="text">Cùng nhau học lập trình tại f8</span>
+            <div class="form-group">
+                <label for="username_confirmation" class="form_label"><h5>Tên đăng nhập</h5></label></br>
+                <input type="text" id="username_confirmation" name="username_confirmation" placeholder="Nhập tên đăng nhập">
+                <span class="form-mesage"></span>
+                
+            </div>
+            <div class="form-group">
+                <label for="email_confirmation" class="form_label"><h5>Email</h5></label></br>
+                <input type="text" id="email_confirmation" name="email_confirmation" placeholder="Nhập email của bạn">
+                <span class="form-mesage"></span>
+                
+            </div>
+            <div class="form-group">
+                <label for="password_confirmation" class="form_label"><h5>Pasword</h5></label></br>
+                <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Nhập mật khẩu">
+                <span class="form-mesage"></span>
+                
+            </div>
+            <div class="form-group">
+                <label for="password_confirmation1" class="form_label"><h5>password_confirmation</h5></label></br>
+                <input type="password" id="password_confirmation1" name="password_confirmation1" placeholder="Nhập mật khẩu">
+                <span class="form-mesage"></span>
+                
+            </div>
+            <button class="form-submit">Đăng kí</button>
+        </div>
+    </form>
+    <script src="index.js"></script>
+    <script>
+        Validator({
+            form:'#form1',
+            formGroupSelector:'.form-group',
+            rules:[
+                Validator.isRequire('#username_confirmation'),
+                
+                Validator.isEmail('#email_confirmation'),
+                Validator.isRequire('#password_confirmation'),
+                Validator.minLength('#password_confirmation',6),
+                Validator.isRequire('#password_confirmation1'),
+                Validator.isComfirmed('#password_confirmation1'),
+            ],
+            onSubmit:function (data){
+                console.log(data)
+            }
+        })
+    </script>
+</body>
+</HTML>
+<form action=""></form
