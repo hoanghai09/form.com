@@ -57,3 +57,10 @@ input:hover{
 .form-mesage{
     color:red
 }
+.advertisement-place{
+    width:80vw;
+    height:500px;
+    border:1px black solid;
+    margin-left:10vw
+
+}
